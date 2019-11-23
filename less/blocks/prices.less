@@ -1,0 +1,300 @@
+@import "../mixin";
+
+.prices {
+  padding-bottom: 20px;
+
+  background-color: #353535;
+
+  &__wrapper {
+    width: 87.5%;
+    min-width: 280px;
+    margin: 0 auto;
+  }
+
+  &__heading {
+    margin: 0;
+    margin-bottom: 30px;
+    padding-top: 35px;
+
+    .font-pt-sans-bold;
+    font-size: 30px;
+    line-height: 30px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__list {
+    display: block;
+
+    & tbody {
+      display: flex;
+      flex-direction: column;
+    }
+
+    & tr {
+      display: flex;
+      justify-content: space-between;
+
+      margin-bottom: 15px;
+    }
+  }
+
+  &__list-number {
+    display: none;
+  }
+
+  &__title {
+    .font-pt-sans-bold;
+    font-size: 20px;
+    line-height: 27px;
+    color: #ffffff;
+  }
+  &__info {
+    .font-pt-sans;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 27px;
+    color: #ffffff;
+  }
+
+  &__add-info {
+    display: none;
+  }
+
+  &__value {
+    .font-pt-sans;
+    font-size: 20px;
+    line-height: 27px;
+    color: #ffffff;
+  }
+
+  &__discount {
+    position: relative;
+
+    height: 57px;
+    padding: 15px 46px 17px 113px;
+    border: 1px solid #484848;
+  }
+
+  &__discount--icon-time::before {
+    content: "";
+
+    position: absolute;
+    top: 15px;
+    left: 20px;
+
+
+    width: 56px;
+    height: 56px;
+
+    background-image: url(../svg/clock.svg);
+    background-repeat: no-repeat;
+  }
+
+  &__discount-info {
+    .font-pt-sans;
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: normal;
+    color: #ffffff;
+  }
+}
+
+
+@media (min-width: 470px ) {
+  .prices__title br {
+    display: none;
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .prices {
+
+    padding-bottom: 55px;
+
+    &__wrapper {
+      width: 83%;
+      min-width: 640px;
+    }
+
+    &__heading {
+      margin-bottom: 55px;
+      padding-top: 50px;
+
+      font-size: 40px;
+      text-align: left;
+    }
+
+    &__list {
+
+      margin-bottom: 9px;
+
+      & tr {
+        flex-grow: 0;
+        justify-content: flex-start;
+
+        margin-bottom: 0;
+
+        border: 1px solid #4a4a4a;
+        border-bottom: none;
+      }
+
+      & tr:last-child {
+        border-bottom: 1px solid #4a4a4a;
+      }
+
+      & td {
+        
+      }
+    }
+
+    &__list-number {
+      display: block;
+
+      padding: 20px 30px;
+      
+      .font-pt-sans;
+      font-size: 20px;
+      font-weight: normal;
+      line-height: 27px;
+      color: rgba(255, 255, 255, 0.3);
+      text-align: left;
+
+      border-right: 1px solid #4a4a4a;
+
+    }
+
+    &__title {
+      flex-grow: 1;
+
+      width: auto;
+      min-width: 230px;
+      padding: 20px 0;
+      padding-left: 20px; 
+
+      text-align: left;
+
+      border-right: 1px solid #4a4a4a;
+    }
+
+    &__title span {
+      display: none;
+    }
+
+    &__add-info {
+      display: block;
+      width: 140px;
+      padding: 20px 0;
+      padding-left: 20px; 
+
+      .font-pt-sans;
+      font-size: 20px;
+      font-weight: normal;
+      line-height: 27px;
+      color: #ffffff;
+      text-align: left;
+      
+      border-right: 1px solid #4a4a4a;
+    }
+
+    &__value {
+
+      width: 138px;
+      padding: 20px 0;
+      padding-left: 20px;
+    }
+
+    &__discount {
+      position: relative;
+  
+      height: 70px;
+      padding: 20px 46px 20px 185px;
+      border: 1px solid #484848;
+      
+    }
+  
+    &__discount--icon-time::before {
+      content: "";
+
+      top: 20px;
+      left: 26px;
+
+      width: 70px;
+      height: 70px;
+    }
+  
+    &__discount-info {
+      display: block;
+      margin-top: 24px;
+
+      .font-pt-sans;
+      font-size: 30px;
+      line-height: 27px;
+      font-weight: bold;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .prices {
+
+    &__wrapper {
+
+      max-width: 960px;
+    }
+
+    &__heading {
+      margin-bottom: 55px;
+      padding-top: 80px;
+
+      font-size: 40px;
+      text-align: left;
+    }
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__list {
+      width: 640px;
+    }
+
+    &__discount {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+
+      width: 260px;
+      height: 341px;
+      padding: 0;
+    }
+
+    &__discount--icon-time::before {
+      content: "";
+
+      top: 34px;
+      left: 64px;
+
+      width: 142px;
+      height: 142px;
+    }
+    
+    &__discount-info {
+      width: 120px;
+      margin-top: 0;
+      margin-bottom: 20px;
+
+      font-size: 20px;
+      font-weight: normal;
+      text-transform: none;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,201 @@
+@import "../mixin.less";
+
+@import "../varibles.less";
+
+
+.advantages {
+  background-color: #242424;
+
+  &__list {
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__icon {
+    display: block;
+    margin: 30px auto 30px auto;
+    width: 96px;
+    height: 94px;
+
+    path {
+      fill: #826550;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 13px;
+
+    .font-pt-sans-bold;
+    font-size: 30px;
+    line-height: 30px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__description {
+    margin: 0 auto;
+    width: 87.5%;
+    min-width: 280px;
+
+    .font-pt-sans;
+    font-size: 20px;
+    line-height: 27px;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  &__toggles {
+    display: flex;
+    justify-content: space-between;
+
+    width: 76px;
+    margin: 0 auto;
+    margin-bottom: 13px;
+  }
+}
+
+.slider {
+  &__item1--on,
+  &__item2--on,
+  &__item3--on {
+    display: block;
+  }
+
+  &__item1--off,
+  &__item2--off,
+  &__item3--off {
+    display: none;
+  }
+
+  &__toggle {
+    margin: 0;
+    padding: 0;
+
+    width: 10px;
+    height: 10px;
+    box-sizing: border-box;
+
+    background: transparent;
+
+    border: 1px solid #ffffff;
+
+    transform: rotate(45deg);
+  }
+
+  &__toggle--on {
+    background-color: #ffffff;
+  }
+}
+
+.triangle {
+ 
+
+  font-size: 0;
+
+  background-color: #ffffff;
+
+  & img {
+    position: relative;
+    top: -1px;
+    
+    width: 100%;
+  }
+}
+
+
+
+@media (min-width: @tablet-width) {
+  .advantages {
+    width: 83%;
+    margin: 0 auto;
+
+    &__item {
+      position: relative;
+
+      padding: 40px 0;
+      padding-left: 128px;
+    }
+
+    &__item:nth-child(2) {
+      border-top: 1px solid #4a4a4a;
+      border-bottom: 1px solid #4a4a4a;
+    }
+
+    &__icon {
+      position: absolute;
+      left: 0;
+      top: 40px;
+
+      margin: 0;
+    }
+
+    &__title {
+      text-align: left;
+    }
+
+    &__description {
+      margin: 0;
+
+      text-align: left;
+    }
+  }
+
+  .slider {
+    &__item2,
+    &__item3 {
+      display: block;
+    }
+    &__toggles {
+      display: none;
+    }
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .advantages {
+    width: 960px;
+    margin-top: 80px;
+
+    &__list {
+      display: flex;
+    }
+
+    &__item {
+      width: 320px;
+      padding: 0;
+    }
+
+    &__item:nth-child(2) {
+      border-top: none;
+      border-bottom: none;
+    }
+
+    &__icon {
+      position: static;
+      left: auto;
+      top: auto;
+
+      margin: 0 auto;
+    }
+
+    &__title {
+      margin-top: 30px;
+
+      text-align: center;
+    }
+
+    &__description {
+      width: 240px;
+      min-width: auto;
+      margin: 0 auto;
+
+      text-align: center;
+    }
+  }
+}

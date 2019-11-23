@@ -1,0 +1,361 @@
+@import "../mixin";
+@import "button";
+@import "input";
+@import "radio";
+@import "checkbox";
+
+.book {
+
+  padding-bottom: 40px;
+  
+  background-color: #ffffff;
+
+  &__wrapper {
+    width: 87.5%;
+    min-width: 280px;
+    margin: 0 auto;
+  }
+
+  &__heading {
+    margin: 0;
+    margin-bottom: 30px;
+    padding-top: 30px;
+
+    .font-pt-sans-bold;
+    font-size: 30px;
+    line-height: 30px;
+    color: #000000;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__button {
+    display: none;
+  }
+}
+
+.form {
+  &__user-info {
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 0;
+    border: 0;
+
+    font-size: 0
+  }
+  &__legend {
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    .font-pt-sans-bold;
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: normal;
+    color: #000000;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__user-last-name {
+    margin-bottom: 6px;
+    width: 100%;
+  }
+
+  &__user-first-name {
+    margin-bottom: 6px;
+    width: 100%;
+  }
+
+  &__user-middle-name {
+    margin-bottom: 32px;
+    width: 100%;
+  }
+
+  &__user-phone {
+    margin-bottom: 6px;
+    width: 100%;
+  }
+
+  &__user-email {
+    margin-bottom: 32px;
+    width: 100%;
+  }
+
+  &__addition-info {
+    width: 100%;
+  }
+
+  //------------------------------
+
+  &__beard-model {
+    position: relative;
+
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 0;
+    border: 0;
+  }
+
+  &__container3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  &__beard-model legend {
+    margin-bottom: 40px;
+  }
+
+  &__beard-model p {
+    width: 75px;
+    height: 140px;
+    margin: 0 auto;
+    padding-top: 65px;
+
+    text-align: center;
+  }
+
+  //------------------------------
+
+  &__addition-service {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    
+  }
+  
+  &__addition-service legend {
+    margin-bottom: 45px;
+  }
+
+  //------------------------------
+
+  &__button {
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 12px 0;
+    border: 0;
+    width: 100%;
+
+    .font-pt-sans-bold;
+    font-size: 18px;
+    line-height: 24px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+
+    background-color: #826550;
+  }
+
+}
+
+
+
+@media (min-width: @tablet-width) {
+  .book {
+
+    &__wrapper {
+      width: 83%;
+      min-width: 640px;
+    }
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+
+      padding-top: 55px;
+      margin-bottom: 55px;
+    }
+  
+    &__heading {
+      margin: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+  
+      .font-pt-sans-bold;
+      font-size: 40px;
+      line-height: 30px;
+      color: #000000;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    &__button {
+      box-sizing: border-box;
+
+      display: block;
+      padding: 12px 0;
+      width: 160px;
+
+      text-align: center;
+    }
+  }
+
+  .form {
+
+    &__user-info {
+      margin-bottom: 55px;
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+      margin-bottom: 35px;
+    }
+
+    &__user-last-name {
+      flex-grow: 1;
+      margin: 0;
+      width: auto;
+    }
+  
+    &__user-first-name {
+      flex-grow: 1;
+      margin: 0;
+      width: auto;
+
+      border-left: none;
+      border-right: none;
+    }
+  
+    &__user-middle-name {
+      flex-grow: 1;
+      margin: 0;
+      width: auto;
+    }
+
+    &__user-phone {
+      margin-bottom: 35px;
+    }
+
+    &__user-email {
+      margin-bottom: 35px;
+    }
+
+    //------------------------------
+
+    &__beard-model {
+      margin-bottom: 60px;
+    }
+
+    &__beard-model::before {
+      content: "";
+  
+      position: absolute;
+
+      top: 13px;
+      left: 0;
+  
+      width: 22%;
+      height: 1px;
+  
+      background-color: #e5ddd5;
+    }
+
+    &__beard-model::after {
+      content: "";
+  
+      position: absolute;
+
+      top: 13px;
+      right: 0;
+  
+      width: 22%;
+      height: 1px;
+  
+      background-color: #e5ddd5;
+    }
+  
+    &__beard-model legend {
+      margin-bottom: 45px;
+    }
+
+    //------------------------------
+
+    &__container4 {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__service {
+      width: 320px;
+    }
+    
+  }
+
+}
+
+@media (min-width: @desktop-width) {
+  .book {
+
+    &__wrapper {
+      max-width: 960px;
+    }
+  }
+
+  .form {
+
+    &__user-info {
+      margin-bottom: 70px;
+    }
+
+    &__container {
+      justify-content: space-between;
+
+      margin-bottom: 35px;
+    }
+
+    &__user-last-name {
+      flex-grow: 0;
+      width: 300px;
+    }
+  
+    &__user-first-name {
+      flex-grow: 0;
+      width: 300px;
+
+      border-left: 1px solid #e5ddd5;
+      border-right: 1px solid #e5ddd5;
+    }
+  
+    &__user-middle-name {
+      flex-grow: 0;
+      width: 300px;
+    }
+
+    &__container2 {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__user-phone {
+      flex-grow: 0;
+      width: 465px;
+    }
+
+    &__user-email {
+      flex-grow: 0;
+      width: 465px;
+    }
+
+    //------------------------------
+
+    &__beard-model::before {
+      width: 280px;
+    }
+
+    &__beard-model::after {
+      width: 280px;
+    }
+
+    //------------------------------
+
+
+
+  }
+}

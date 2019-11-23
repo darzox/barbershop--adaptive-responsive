@@ -1,0 +1,91 @@
+@import "../mixin";
+
+.radio {
+  margin: 0;
+  padding: 0;
+
+  position: relative;
+}
+
+.radio__label {
+  .font-pt-sans;
+  font-size: 18px;
+  line-height: 24px;
+
+  &::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    margin-left: -25px;
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    background-color: #ffffff;
+    border: 1px solid #e5ddd5;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+  }
+}
+
+.radio__button:checked + .radio__label::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+
+  position: absolute;
+
+  top: 15px;
+  left: 28px;
+
+  background-color: #ffffff;
+  border: 1px solid #e5ddd5;
+
+  border-radius: 50%;
+}
+
+.radio--beard-admiral {
+
+  background-image: url("../svg/admiral.svg");
+  background-repeat: no-repeat;
+  background-size: 46px auto;
+  background-position: center 100px;
+}
+
+.radio--beard-lesorub {
+
+  background-image: url("../svg/forest.svg");
+  background-repeat: no-repeat;
+  background-size: 53px auto;
+  background-position: center 100px;
+}
+
+.radio--beard-polar {
+
+  background-image: url("../svg/polar.svg");
+  background-repeat: no-repeat;
+  background-size: 53px auto;
+  background-position: center 100px;
+}
+
+.radio--beard-boyarin {
+
+  background-image: url("../svg/boyarin.svg");
+  background-repeat: no-repeat;
+  background-size: 53px auto;
+  background-position: center 100px;
+}
+
+.radio--beard-wise {
+
+  background-image: url("../svg/wise.svg");
+  background-repeat: no-repeat;
+  background-size: 36px auto;
+  background-position: center 100px;
+}
+
+

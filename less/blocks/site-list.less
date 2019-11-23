@@ -1,0 +1,127 @@
+@import "../mixin";
+@import "../varibles";
+
+.site-list {
+  margin: 0;
+  padding: 0;
+
+
+  list-style: none;
+  &__link {
+    display: block;
+    padding: 12px 12px;
+    padding-bottom: 13px;
+
+    .font-pt-sans-bold;
+    font-size: 18px;
+    line-height: 24px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    background-color: #826550;
+    border-top: 1px solid #886e5b;
+    border-bottom: 1px solid #71543f;
+  }
+  &__link[href] {
+    &:hover {
+      background-color: #755a46;
+      border-top-color: #755a46;
+    }
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+      background-color: #6a4d38;
+      border-top-color: #6a4d38;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-grow: 1;
+
+    width: 570px;
+
+    &__item {
+      margin-right: 32px;
+      &:last-child {
+        margin-right: 0;
+      }
+      &--active {
+        position: relative;
+        &::after {
+          content: "";
+
+          position: absolute;
+          right: 0;
+          bottom: -3px;
+          left: 0;
+
+          height: 3px;
+
+          background-color: #826550;
+        }
+      }
+    }
+
+    &__link {
+      padding: 0;
+      padding-top: 25px;
+      padding-bottom: 23px;
+
+      background: none;
+      border: none;
+      &[href] {
+        &:hover {
+          color: #826550;
+
+          background-color: #000000;
+        }
+        &:active {
+          color: #ffffff;
+
+          background-color: #000000;
+          opacity: 0.3 ;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    width: 780px;
+
+    &__item {
+      margin-right: 0;
+
+      &--active::after {
+        right: 30px;
+        left: 30px;
+      }
+    }
+
+    &__link {
+      padding-left: 31px;
+      padding-right: 31px;
+
+      &[href] {
+        &:hover {
+          color: #000000;
+
+          background-color: #ffffff;
+        }
+        &:active {
+          color: rgba(0, 0, 0, 0.3);
+
+          background-color: #ffffff;
+
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

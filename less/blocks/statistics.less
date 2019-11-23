@@ -1,0 +1,228 @@
+@import "../mixin.less";
+
+.statistics {
+  position: relative;
+  z-index: 9;
+
+
+  &__header {
+    padding: 30px 40px 25px 40px;
+
+    background-color: #ffffff;
+  }
+  &__slogan {
+    display: block;
+    margin-bottom: 15px;
+
+    .font-pt-sans-bold;
+    font-size: 30px;
+    line-height: 30px;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__intro {
+    margin: 0;
+
+    .font-pt-sans;
+    font-size: 20px;
+    line-height: 27px;
+    color: #000000;
+    text-align: center;
+  }
+  &__legend {
+    display: block;
+
+    .font-pt-sans;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  &__legend--top {
+    display: none;
+
+  }
+
+  &__legend--bottom {
+    padding-top: 20px;
+    padding-bottom: 14px;
+
+    text-align: center;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &__list {
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    border-collapse: collapse;
+    background-color: #404040;
+    & tr:nth-child(2) {background-color: #4e4e4e;}
+    & tr:nth-child(3) {background-color: #353535;}
+  }
+  &__value {
+    width: 50%;
+    padding: 20px 0 19px 20px;
+
+    .font-pt-sans;
+    font-size: 40px;
+    line-height: 40px;
+    color: #ffffff;
+    vertical-align: top;
+
+    & sup {
+      top: -0.35em;
+
+      margin-left: 5px;
+      vertical-align: top;
+    }
+  }
+  &__field {
+    width: 50%;
+    padding: 20px 20px 19px 0;
+
+    .font-pt-sans;
+    font-size: 18px;
+    line-height: 18px;
+    color: #f7f4f1;
+    text-align: right;
+    vertical-align: top;
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .statistics {
+    width: 84%;
+    max-width: 960px;
+    margin: 0 auto;
+    margin-top: -185px;
+
+    &__header {
+      display: flex;
+      flex-wrap: wrap;
+
+      position: relative;
+
+      min-height: 129px;
+
+      &::before {
+        content: "";
+
+        position: absolute;
+        top: 27px;
+        left: -15px;
+
+        border: 15px solid transparent;
+        border-bottom-color: #ffffff;
+        transform: rotate(45deg);
+      }
+    }
+
+    &__slogan {
+      width: 50%;
+
+      font-size: 40px;
+      line-height: 40px;
+      text-transform: none;
+      text-align: left;
+    }
+
+    &__intro {
+      width: 36%;
+      padding-top: 10px;
+
+      text-align: left;
+    }
+
+    &__legend--top {
+      display: block;
+      width: 50%;
+      color: rgba(0, 0, 0, 0.3);
+    }
+
+    &__list {
+
+      & tbody {
+      display: flex;
+      flex-wrap: wrap;
+      }
+
+      & tr {
+        width: 50%;
+        box-sizing: border-box;
+        padding: 25px 35px;
+        padding-bottom: 28px;
+      }
+
+      & td {
+        display: block;
+        width: auto;
+        padding: 0;
+      }
+    }
+
+    &__value {
+      margin-bottom: 7px;
+
+      font-size: 72px;
+      line-height: 72px;
+    }
+
+    &__field {
+      font-size: 20px;
+      line-height: 27px;
+      text-align: left;
+
+      & br {
+        display: none;
+      }
+    }
+
+
+    &__legend--bottom {
+      display: none;
+    }
+  }
+
+}
+
+
+@media (min-width: @desktop-width) {
+  .statistics {
+    display: flex;
+
+    width: 960px;
+    margin-top: -160px;
+
+    &__header {
+      width: 240px;
+    }
+
+    &__slogan {
+      width: auto;
+      margin-right: 40px;
+      margin-bottom: 30px;
+    }
+
+    &__intro {
+      width: auto;
+      margin-bottom: 32px;
+      padding-right: 30px;
+      padding-left: 0px;
+    }
+
+    &__legend--top {
+      width: auto;
+      margin-top: auto;
+    }
+
+    &__list {
+      display: flex;
+
+      width: 640px;
+    }
+  }
+}

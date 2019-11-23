@@ -1,0 +1,43 @@
+@import "../mixin";
+
+.checkbox {
+  position: relative;
+  
+  display: block;
+  margin-bottom: 40px;
+  padding-left: 60px;
+  width: 150px;
+
+  .font-pt-sans;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+
+  &::before {
+   content: "";
+
+   width: 35px;
+   height: 35px;
+
+   position: absolute;
+   top: 0;
+   left: 0;
+
+   background-color: #ffffff;
+   border: 1px solid #e5ddd5;
+  }
+}
+
+.checkbox__input:checked + .checkbox::after {
+  content: "";
+
+  width: 22px;
+  height: 16px;
+
+  position: absolute;
+  top: 9px;
+  left: 8px;
+
+  background-image: url("../svg/check.svg");
+  background-repeat: no-repeat;
+} 

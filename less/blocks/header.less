@@ -1,0 +1,58 @@
+@import "../mixin";
+@import "../varibles";
+@import "main-nav";
+@import "site-list";
+@import "user-list";
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  background-color: #242424;
+  &__logo {
+    box-sizing: border-box;
+    height: 85px;
+    text-align: center;
+  }
+  &__logo-image {
+    width: 226px;
+    height: 85px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    background-color: #000000;
+  }
+
+  .page-header__logo {
+    order: 2;
+
+    width: 100%;
+    height: 400px;
+
+    background-image: url("../img/back-tablet.jpg");
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .page-header__logo-image {
+    display: block;
+    width: 370px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__logo {
+    height: 648px;
+    background-image: url("../img/back-desktop.jpg");
+  }
+  .page-header__logo-image {
+    width: 563px;
+    margin-top: 57px;
+  }
+}

@@ -1,0 +1,300 @@
+@import "../mixin.less";
+
+@import "../varibles.less";
+
+.reviews {
+  padding-top: 26px;
+  background-color: #ffffff;
+
+  border-top: 1px solid #e5ddd5;
+
+  &__wrapper {
+    width: 83%;
+    min-width: 280px;
+
+    margin: 0 auto;
+  }
+
+  &__heading {
+    margin: 0;
+
+    .font-pt-sans-bold;
+    font-size: 30px;
+    line-height: 30px;
+    color: #000000;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__button--not-mobile {
+    display: none;
+    
+    text-align: center;
+  }
+
+  &__list {
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    display: flex;
+
+    margin: 0;
+  }
+  &__author-picture {
+    flex-shrink: 0;
+
+    margin: 0;
+    margin-right: 20px;
+
+    width: 50px;
+    height: 50px;
+
+    overflow: hidden;
+
+    border: 1px solid #e5ddd5;
+  }
+
+  &__reviews__author-image {
+    width: auto;
+  }
+
+  &__author-name {
+    display: block;
+    margin-bottom: 20px;
+
+    .font-pt-sans-bold;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 27px;
+    color: #000000;
+  }
+  &__text {
+    margin: 0;
+
+    .font-pt-sans;
+    font-size: 18px;
+    line-height: 27px;
+    color: #000000;
+  }
+
+  &__prev,
+  &__next {
+    display: none;
+  }
+
+  &__toggles {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0;
+    width: 76px;
+    margin: 0 auto;
+  }
+}
+
+
+.slider2 {
+  &__item4--on,
+  &__item5--on,
+  &__item6--on {
+    display: flex;
+  }
+
+  &__item4--off,
+  &__item5--off,
+  &__item6--off {
+    display: none;
+  }
+
+  &__toggle4,
+  &__toggle5,
+  &__toggle6 {
+    margin: 0;
+    padding: 0;
+
+    width: 10px;
+    height: 10px;
+    box-sizing: border-box;
+
+    background: transparent;
+
+    border: 1px solid #353535;
+
+    transform: rotate(45deg);
+  }
+
+  &__toggle2--on {
+    background-color: #353535;
+  }
+}
+
+.corner2 {
+  font-size: 0;
+  background-color: #ffffff;
+
+  & img {
+    width: 100%;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .reviews {
+    padding-top: 37px;
+
+    &__wrapper {
+      min-width: 640px;
+    }
+    
+    &__wrapper-header {
+      display: flex;
+      justify-content: space-between;
+
+      margin-bottom: 36px;
+    }
+
+    &__button--not-mobile {
+      display: block;
+      width: 160px;
+      padding: 12px 0;
+    }
+
+    &__list {
+      display: flex;
+
+      margin-bottom: 61px;
+
+      border: 1px solid #e5ddd5;
+    }
+
+    &__prev,
+    &__next {
+      position: relative;
+
+      flex-grow: 0;
+
+      display: block;
+
+      width: 50px;
+
+      box-sizing: border-box;
+
+      border: none;
+
+      background-color: transparent;
+    }
+
+    &__prev {
+      border-right: 1px solid #e5ddd5;
+    }
+
+    &__prev::after {
+      content: "";
+
+      position: absolute;
+      top: calc(50% - 6px);
+      left: calc(50% - 6px);
+
+      width: 0;
+      height: 0;
+
+      border-top: 6px solid transparent;
+      border-right: 12px solid #000000;
+      border-bottom: 6px solid transparent;
+    }
+
+    &__next {
+      border-left: 1px solid #e5ddd5;
+    }
+
+    &__next::after {
+      content: "";
+
+      position: absolute;
+      top: calc(50% - 6px);
+      left: calc(50% - 6px);
+
+      width: 0;
+      height: 0;
+
+      border-top: 6px solid transparent;
+      border-left: 12px solid #000000;
+      border-bottom: 6px solid transparent;
+    }
+
+    &__item {
+
+      flex-grow: 1;
+
+      padding-top: 30px;
+      padding-bottom: 35px;
+    }
+
+    &__author-picture {
+      width: 80px;
+      height: 80px;
+
+      border: none;
+
+      margin: 0 30px;
+    }
+
+    &__toggles {
+      position: relative;
+
+      top: -67px;
+
+      padding: 0 25px;
+
+      background-color: #ffffff;
+    }
+  }
+
+
+  .corner2 {
+    display: none;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .reviews {
+
+    &__wrapper {
+      max-width: 960px;
+    }
+
+    &__list {
+      border: none;
+      margin-bottom: 88px;
+    }
+
+    &__prev,
+    &__next {
+      border: 1px solid #e5ddd5;
+    }
+
+    &__item {
+      margin: 0 20px;
+      padding: 0;
+
+      border: 1px solid #e5ddd5;
+    }
+
+    &__author-picture {
+      width: 249px;
+      height: 160px;
+
+      margin: 0;
+      margin-right: 70px;
+    }
+
+    &__paragraph {
+      margin-top: 35px;
+    }
+
+    &__toggles {
+      top: -46px;
+    }
+  }
+}
