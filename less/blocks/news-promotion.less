@@ -51,6 +51,35 @@
     display: flex;
 
     margin-bottom: 20px;
+
+    cursor: pointer;
+  }
+
+  &__item:hover &__date {
+    background-color: #826550;
+  }
+
+  &__item:hover &__date::after {
+    border-top-color: #826550;
+  }
+
+  &__item:hover a {
+    color: #826550;
+    text-decoration: underline;
+  }
+
+  &__item:active &__date {
+
+    background-color: #6a4d38;
+  }
+
+  &__item:active &__date::after {
+    border-top-color: #6a4d38;
+  }
+
+  &__item:active a {
+    color: #6a4d38;
+    text-decoration: underline;
   }
 
   &__item:last-child {

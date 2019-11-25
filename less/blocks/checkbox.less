@@ -28,6 +28,27 @@
   }
 }
 
+.checkbox:hover::before {
+  border-color: #d5c9bd;
+}
+
+.checkbox:active::before {
+  background-color: #d5c9bd;
+}
+
+.checkbox__input:checked + .checkbox:hover::before {
+  border-color: #d5c9bd;
+}
+
+.checkbox__input:checked + .checkbox:active::before {
+  background-color: #d5c9bd;
+}
+
+.checkbox__input:checked + .checkbox:active::after {
+  display: none;
+}
+
+
 .checkbox__input:checked + .checkbox::after {
   content: "";
 
